@@ -13,7 +13,7 @@ const VerificationForm = (props) => {
 			code: enteredCode,
 			user_id: props.userId
 		}
-		axios.post(process.env.REACT_APP_API_DOMAIN + '/v1/public/verify', formData, {
+		axios.post(process.env.REACT_APP_API_DOMAIN + '/v1/public/verify-phone', formData, {
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded',
 			}
