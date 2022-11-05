@@ -19,7 +19,7 @@ const RegistrationForm = props => {
 			phone: enteredPhone,
 		};
 
-		axios.post('http://localhost:8000/v1/public/register', formData, {
+		axios.post(process.env.REACT_APP_API_DOMAIN + '/v1/public/register', formData, {
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded',
 			}
