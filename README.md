@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# OTP Registration Form FE
+
+### Demo
+![Database diagram](https://github.com/lgadzhev/otp-fe/blob/main/demo1.gif?raw=true)
+![Database diagram](https://github.com/lgadzhev/otp-fe/blob/main/demo2.gif?raw=true)
+![Database diagram](https://github.com/lgadzhev/otp-fe/blob/main/demo3.gif?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
