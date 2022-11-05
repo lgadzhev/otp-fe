@@ -5,11 +5,23 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import axios from "axios";
 
+/**
+ * This component is responsible for the registration form
+ *
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const RegistrationForm = props => {
 	const [enteredEmail, setEnteredEmail] = useState("");
 	const [enteredPassword, setEnteredPassword] = useState("");
 	const [enteredPhone, setEnteredPhone] = useState("");
 
+	/**
+	 * Upon submitting the data by the user, sends a request to the API
+	 *
+	 * @param event
+	 */
 	const submitHandler = (event) => {
 		event.preventDefault();
 
@@ -24,8 +36,10 @@ const RegistrationForm = props => {
 				'Content-Type': 'application/x-www-form-urlencoded',
 			}
 		}).then((response) => {
+			//Tell the parent component that the registration was successful
 			props.registeruser(response.data.fields['userId']);
 		}).catch(err => {
+			//Show the failed registration message
 			props.triggerMessage(err.response.data.status_message);
 		});
 	};

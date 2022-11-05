@@ -2,13 +2,24 @@ import {useState} from "react";
 import axios from "axios";
 import './NewAttemptButton.css';
 
+/**
+ * This component is responsible for the new button that appears after certain timeout and
+ * is requesting a new phone verification code
+ *
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const NewAttemptButton = props => {
     const [newAttempt, setNewAttempt] = useState(false);
 
-    const timeoutDuration = 60e3; //1 minute
+    const timeoutDuration = 60e3; //1 minute timeout after which the button appears
 
     setTimeout(() => setNewAttempt(true), timeoutDuration);
 
+    /**
+     * Makes a call to request a new code
+     */
     const newAttemptHandler = () => {
         setNewAttempt(false);
 
